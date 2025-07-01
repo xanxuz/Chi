@@ -199,23 +199,36 @@ describe('Date picker', () => {
   });
 
   describe('Date picker 3', () => {
-    it('should display today\'s date if datepicker doesn\'t have a default date', () => {
-      const datePickerInput = '#datepicker-3 input';
-      const datePickerPopover = '#datepicker-3 .chi-popover';
+    const datePickerInput = '#datepicker-3 input';
+    const datePickerPopover = '#datepicker-3 .chi-popover';
 
-      const today = new Date();
-      const year = today.getFullYear();
-      const month = (today.getMonth() + 1).toString().padStart(2, '0');
-      const day = today.getDate().toString().padStart(2, '0');
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = (today.getMonth() + 1).toString().padStart(2, '0');
+    const day = today.getDate().toString().padStart(2, '0');
 
-      const expectedDate = `${month}/${day}/${year}`;
+    const currentDate = `${month}/${day}/${year}`;
 
+    it('should display today\'s date in datepicker if it doesn\'t have a default date', () => {
       cy.get(datePickerInput).click();
 
-      // Check active date is equal today
+      // Check the current date is visible
       cy.get(datePickerPopover).within(() => {
         cy.get('.chi-datepicker__day')
-          .filter(`[data-date="${expectedDate}"]`)
+          .filter(`[data-date="${currentDate}"]`)
+          .should('exist');
+      })
+    });
+
+    it('should display today\'s date in datepicker after clearing the input', () => {
+      cy.get(datePickerInput).type('01/25/2019').blur()
+
+      cy.get(datePickerInput).clear().blur()
+
+      // Check the current date is visible
+      cy.get(datePickerPopover).within(() => {
+        cy.get('.chi-datepicker__day')
+          .filter(`[data-date="${currentDate}"]`)
           .should('exist');
       })
     });
