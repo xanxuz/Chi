@@ -10,7 +10,6 @@ describe('chi-expansion-panel', () => {
     DISABLED: 'disabled',
   };
 
-  // Helper functions for panel elements
   const CLASS_ICON = 'chi-icon -icon--success';
   const CLASS_HEADER = 'chi-epanel__header';
   const CLASS_COLLAPSE = 'chi-epanel__collapse';
@@ -151,6 +150,7 @@ describe('chi-expansion-panel', () => {
         expect(stub.getCall(3).args[0]).to.equal(EXPECTED.DISABLED);
       });
     });
+
     it('Should toggle flips between PENDING and ACTIVE', () => {
       cy.window().then((win) => {
         const ep = win.expansionPanelExample.find((e) => e._elem.id === 'expansion-panel-2');
