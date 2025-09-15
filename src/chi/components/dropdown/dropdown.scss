@@ -635,6 +635,36 @@ a {
   }
 }
 
+chi-dropdown-select {
+  .chi-dropdown__menu {
+    .chi-dropdown__menu-item {
+      display: flex;
+      justify-content: space-between;
+
+      .chi-button {
+        &.-left  { margin-right: .75rem; }
+        &.-right { margin-left:  .75rem; }
+      }
+
+      &:is(:hover, .-hover):not(.-disabled, .-active, :has(.chi-checkbox)) {
+        background-color: $dropdown-menu-item-hover-background-color;
+        cursor: pointer;
+      }
+
+      a {
+        flex-grow: 1;
+        color: $color-text-base;
+        text-decoration: none;
+
+        &:is(:hover, .-hover, :focus, :active) {
+          background: transparent;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
 
 chi-dropdown[select-mode],
 .chi-dropdown {
