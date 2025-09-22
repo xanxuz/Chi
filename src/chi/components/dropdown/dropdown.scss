@@ -299,6 +299,36 @@ $sizes: (
     &.-w--xl {
       min-width: 30rem;
     }
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      height: $dropdown-menu-item-height;
+
+      &:is(:hover, .-hover) {
+        background-color: $dropdown-menu-item-hover-background-color;
+        cursor: pointer;
+      }
+
+      &.-active {
+        background-color: $dropdown-menu-item-active-background-color;
+        box-shadow: inset 0.125rem 0 0 $dropdown-menu-item-active-border-color;
+        font-weight: $dropdown-menu-item-active-font-weight;
+
+        .chi-dropdown__menu-item {
+          color: $dropdown-menu-item-active-text-color;
+
+          &:is(:hover, .-hover) {
+            background-color: transparent;
+            box-shadow: none;
+          }
+        }
+      }
+
+      .chi-button {
+        margin-right: 1rem;
+      }
+    }
   }
 }
 
@@ -688,42 +718,6 @@ chi-dropdown[select-mode],
       &::after {
         color: $dropdown-trigger-icon-color;
       }
-    }
-  }
-}
-
-.chi-dropdown__menu{
-  .chi-dropdown__menu-wrapper {
-    display: flex;
-    justify-content: space-between;
-    height: $dropdown-menu-item-height;
-
-    &:is(:hover, .-hover) {
-      background-color: $dropdown-menu-item-hover-background-color;
-      cursor: pointer;
-    }
-
-    &.-active {
-      background-color: $dropdown-menu-item-active-background-color;
-      box-shadow: inset 0.125rem 0 0 $dropdown-menu-item-active-border-color;
-      font-weight: $dropdown-menu-item-active-font-weight;
-
-      .chi-dropdown__menu-item {
-        color: $dropdown-menu-item-active-text-color;
-
-        &:is(:hover, .-hover) {
-          background-color: transparent;
-          box-shadow: none;
-        }
-      }
-    }
-
-    .chi-dropdown__menu-item {
-      flex-grow: 1;
-    }
-
-    .chi-button {
-      margin-right: 1rem;
     }
   }
 }
