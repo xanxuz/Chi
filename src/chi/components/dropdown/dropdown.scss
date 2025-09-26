@@ -36,7 +36,7 @@ $sizes: (
     select-line-height: $dropdown-select-xl-line-height,
     select-chevron-size: $dropdown-select-xl-arrow-background-size,
     select-padding: $dropdown-select-xl-padding,
-  )
+  ),
 );
 
 .chi-dropdown {
@@ -302,8 +302,14 @@ $sizes: (
 
     &-wrapper {
       display: flex;
-      justify-content: space-between;
       height: $dropdown-menu-item-height;
+      justify-content: space-between;
+      pointer-events:none;
+
+      > .chi-dropdown__menu-item {
+        flex-grow: 1;
+        pointer-events: all;
+      }
 
       &:is(:hover, .-hover) {
         background-color: $dropdown-menu-item-hover-background-color;
@@ -325,8 +331,13 @@ $sizes: (
         }
       }
 
-      .chi-button {
-        margin-right: 1rem;
+      chi-tooltip {
+        margin-right: 0.5rem;
+        pointer-events: all;
+
+        &:last-of-type {
+          margin-right: 1rem;
+        }
       }
     }
   }
@@ -366,7 +377,9 @@ $sizes: (
       }
     }
 
-    &:not(.-primary):not(.-secondary):not(.-dark):not(.-light):not(.-danger):not(.-outline):not(.-flat):not(.chi-dropdown__select-mode) {
+    &:not(.-primary):not(.-secondary):not(.-dark):not(.-light):not(.-danger):not(.-outline):not(.-flat):not(
+        .chi-dropdown__select-mode
+      ) {
       &.-xs {
         padding-top: $dropdown-trigger-base-xs-padding-y;
         padding-bottom: $dropdown-trigger-base-xs-padding-y;
@@ -446,7 +459,6 @@ $sizes: (
       }
 
       &:not(.-flat):not(.chi-dropdown__select-mode) {
-
         border: $dropdown-button-border-width solid $dropdown-button-border-color;
 
         &:hover {
@@ -656,7 +668,7 @@ a {
         &:not(.-active) {
           outline: 0.125rem solid $dropdown-menu-item-focus-outline;
         }
-        
+
         &.-active {
           outline: 0.125rem solid $dropdown-menu-item-active-border-color;
         }
