@@ -304,7 +304,8 @@ $sizes: (
       display: flex;
       height: $dropdown-menu-item-height;
       justify-content: space-between;
-      pointer-events:none;
+      padding-right: 0.5rem;
+      pointer-events: none;
 
       > .chi-dropdown__menu-item {
         flex-grow: 1;
@@ -331,13 +332,16 @@ $sizes: (
         }
       }
 
-      chi-tooltip {
+      > :is(chi-tooltip, chi-button) {
         margin-right: 0.5rem;
-        pointer-events: all;
+      }
 
-        &:last-of-type {
-          margin-right: 1rem;
-        }
+      > :is(chi-tooltip, chi-button:not([disabled])) {
+        pointer-events: all;
+      }
+
+      > chi-tooltip:has(chi-button[disabled]) {
+        cursor: default;
       }
     }
   }

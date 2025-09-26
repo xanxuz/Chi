@@ -1,10 +1,10 @@
 {
-  "dist/chi.css": "sha256-k18/ohUbv3cYfadYU7fZeWHRIppJcB92TFMxHyi7Ix8=",
-  "dist/chi-centurylink.css": "sha256-QyQaakYl5JYTnsQMm0tTzaBi5RJMeVez5BBWb/YDc7E=",
-  "dist/chi-portal.css": "sha256-ucU6AaFEuNEGSiWWpEl6rKYtT/FqH8JeZucQ+weadIw=",
-  "dist/chi-brightspeed.css": "sha256-Q7sbrftFvt8t2CfOAHdC1hQGt74zdLAF0Pfx/OYaZu0=",
-  "dist/chi-colt.css": "sha256-2Dv1MKt/HIYk27LuxDuaSKYMgJZPHJg5GSx+hXwl28E=",
-  "dist/chi-test.css": "sha256-6GGd4Iuq5mwR2JwGl4cH6SR4215yXYSPkdKUrcyZdEk=",
+  "dist/chi.css": "sha256-KFrVJihcp5ttxGkZcf0j76eHISDNtO5ONQ8CoKfD2pA=",
+  "dist/chi-centurylink.css": "sha256-uZ9ofUqXPC7XzgqDXj0FsDHxWnUzJTKXUZp1JdSmKh8=",
+  "dist/chi-portal.css": "sha256-RPSuzZmaZfjjmZoYH1CVranAcNBCMZCDz0mRWVDvzV0=",
+  "dist/chi-brightspeed.css": "sha256-b1Vr4skgrIBZJBVvk/Tn9tREFLH3tn2e51e5AkVRdpM=",
+  "dist/chi-colt.css": "sha256-kCSL/VyG/j/bYtBR48VKElHk2eDe/+z0eCNtnaY9OrE=",
+  "dist/chi-test.css": "sha256-5H4xibNWro+j9j2tlg0bNJSZ8jclDpJ4bksd/LnYdrc=",
   "dist/js/chi.js": "sha256-89RV9TsicYJxmMcwVFlJLNrUNH+ZFx6H1GMGrYtCifk=",
   "dist/assets/themes/lumen/images/favicon.svg": "sha256-+0ITKaXKx702ZWOzublRl83MJVOIbUMTQG8JvN+76B0=",
   "dist/assets/themes/lumen/images/favicon.ico": "sha256-EkKmbH+i/VIQAtUl7NF4bPVaaJZCeBc5xWx8LTcMJp0=",
@@ -18,6 +18,6 @@
   "dist/assets/themes/colt/images/favicon.ico": "sha256-01eRZwbyuQHUlu+olKBDR6JW2BpEIQgJvyvtgnJ8aoc=",
   "dist/assets/themes/colt/images/background-hero.png": "sha256-z3ObQ7Ovb1KKHLyl1nO5adiyxC++90EZQ6QYVmGs6FA=",
   "dist/assets/themes/colt/images/background-login.png": "sha256-V60LOksMkHO8xJNTRQUXUk+Vn/xJ0Vxa9+BQVN5Wakg=",
-  "dist/js/ce/ux-chi-ce/ux-chi-ce.esm.js": "sha256-GYvhKfH4CTXJwT9Yzt0My5kx9xt2r6oEIMkW7m+f1vk=",
+  "dist/js/ce/ux-chi-ce/ux-chi-ce.esm.js": "sha256-sZvh3OMZuq5g1FbcuxXtbZwzE31wEc1TW2Cw72bzstg=",
   "dist/js/ce/ux-chi-ce/ux-chi-ce.js": "sha256-uwblV0VFkSI96uIvK5TSQH2bAFWQjo5Z9iEsZa9Uctk="
 }
