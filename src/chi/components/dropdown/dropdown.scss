@@ -324,11 +324,12 @@ $sizes: (
 
         .chi-dropdown__menu-item {
           color: $dropdown-menu-item-active-text-color;
+        }
 
-          &:is(:hover, .-hover) {
-            background-color: transparent;
-            box-shadow: none;
-          }
+        // Specific rule to avoid being overridden by styles targeting <a> tags
+        > a.chi-dropdown__menu-item.chi-dropdown__menu-item:is(:hover, .-hover) {
+          background-color: transparent;
+          box-shadow: none;
         }
       }
 
