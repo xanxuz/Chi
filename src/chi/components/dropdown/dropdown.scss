@@ -337,8 +337,8 @@ $sizes: (
         }
       }
 
-      > :is(chi-tooltip, chi-button) {
-        margin-right: 0.5rem;
+      > :is(chi-tooltip, chi-button) + :is(chi-tooltip, chi-button) {
+        margin-left: 0.5rem;
       }
 
       > :is(chi-tooltip, chi-button:not([disabled])) {
