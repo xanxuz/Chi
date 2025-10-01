@@ -123,6 +123,10 @@ $sizes: (
         white-space: normal;
       }
 
+      &.-no-interaction {
+        pointer-events: none;
+      }
+
       .-flex--ellipsis {
         display: block;
         flex: 1;
@@ -346,7 +350,7 @@ $sizes: (
       }
     }
 
-    &-footer:not(:first-child) {
+    &-footer {
       margin-top: 0.5rem;
     }
   }
